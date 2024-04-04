@@ -1,0 +1,60 @@
+<header id="header" class="fixed-top bg-white" style="z-index: 1000; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);">
+  <div class="container d-flex align-items-center justify-content-lg-between">
+    <a href="index.html" class="logo me-lg-0">
+      <span class="text-black text-lg font-bold ml-8 sm:ml:0">Vijay kumar Chole</span><br />
+      <span class="textName text-sm">leader in Agricultural Economics</span>
+    </a>
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul class="desktop-menu d-flex justify-content-center" *ngIf="!isMenuOpen">
+        <li><a class="nav-link scrollto" href="#about1">About</a></li>
+        <li><a class="nav-link" (click)="scrollToTop()" routerLink="achievement">Achievements</a></li>
+        <li><a class="nav-link" (click)="scrollToTop()" routerLink="goals">Visionary Approach </a></li>
+        <li><a class="nav-link scrollto" (click)="scrollToTop()" routerLink="media">Stepping Stones</a></li>
+        
+        <li class="relative group -ml-6" (click)="toggleDropdown()">
+          <div class="flex items-center">
+            <a class="nav-link scrollto">Gallery</a>
+            <i class="bi bi-caret-down-fill ml-2 mt-1"></i>
+          </div>
+          <ul class="absolute hidden group-hover:block bg-white border rounded-md shadow-md z-10 -ml-20 mt-0" [ngClass]="{ 'hidden': !isDropdownOpen }">
+            <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-100" routerLink="newspaper-gallary">Newspapar Articles</a></li>
+            <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-100" routerLink="webinar">Seminars/Webinars</a></li>
+            <li><a class="block px-4 py-2 text-gray-800 hover:bg-gray-100" routerLink="glance">Vijaykumar chole at Glance</a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" (click)="scrollToTop()" routerLink="contact">Contact us</a></li>
+
+      </ul>
+      <nav class="navbar order-last order-lg-0 navbar-mobile" *ngIf="isMenuOpen">
+        <ul>
+          <li><a class="nav-link scrollto" (click)="closeMenu()" href="#about1">About</a></li>
+          <li><a class="nav-link" (click)="scrollToTop()" (click)="closeMenu()"
+              routerLink="achievement">Achievements</a></li>
+          <li><a class="nav-link" (click)="scrollToTop()" (click)="closeMenu()" routerLink="goals">Visionary Approach
+            </a></li>
+          <li><a class="nav-link scrollto" (click)="closeMenu()" routerLink="media">Stepping Stones</a></li>
+          <div class="dropdown ml-[10px]">
+            <button class="btn" data-dropdown-toggle="gal">Gallary</button>
+            <i class="bi bi-caret-down-fill"></i>
+            <div class="dropdown-options ml-6" id="gal">
+              <a routerLink="newspaper-gallary">Newspaper Articles</a>
+              <a routerLink="webinar">Seminars/ Webinars</a>
+            </div>
+          </div>
+          <li><a class="nav-link scrollto" (click)="closeMenu()" routerLink="contact">Contact us</a></li>
+        </ul>
+        <i class="bi mobile-nav-toggle" [ngClass]="{'bi-x': isMenuOpen,   'bi-list': !isMenuOpen}"
+          (click)="toggleMenu()"></i>
+      </nav>
+      <i class="bi mobile-nav-toggle" [ngClass]="{ 'bi-list': !isMenuOpen}" (click)="toggleMenu()"></i>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.facebook.com/vijay.chole" class="facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://x.com/vijaychole?t=7VTBHDIrQhumxWwYX9O_0w&s=09" class="twitter"><i
+          class="bi bi-twitter-x"></i></a>
+      <a href="https://www.linkedin.com/in/vijaykumar-chole-1a439348?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="" class="instagram invisible"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,328 @@
+@import 'bootstrap-variables';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+@import '~animate.css/animate.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Almarai:wght@300&family=Archivo+Black&family=Candal&family=Crimson+Text&family=Dancing+Script:wght@500&family=Instrument+Serif&family=Italianno&family=Paytone+One&family=Philosopher&family=Roboto+Mono:wght@500&family=Varela&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Candal&family=Crimson+Text&family=Dancing+Script:wght@500&family=Instrument+Serif&family=Italianno&family=Paytone+One&family=Philosopher&family=Roboto+Mono:wght@500&family=Varela&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Almarai:wght@300&family=Archivo+Black&family=Candal&family=Crimson+Text&family=Dancing+Script:wght@500&family=Instrument+Serif&family=Italianno&family=Manrope&family=Montserrat:wght@200;300&family=Paytone+One&family=Philosopher&family=Roboto+Mono:wght@500&family=Varela&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Almarai:wght@300&family=Archivo+Black&family=Candal&family=Crimson+Text&family=Dancing+Script:wght@500&family=Instrument+Serif&family=Italianno&family=Montserrat:wght@200;300&family=Paytone+One&family=Philosopher&family=Roboto+Mono:wght@500&family=Varela&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Almarai:wght@300&family=Archivo+Black&family=Candal&family=Crimson+Text&family=Dancing+Script:wght@500&family=Instrument+Serif&family=Italianno&family=Montserrat:wght@200;300&family=Paytone+One&family=Philosopher&family=Roboto+Mono:wght@500&family=Rubik:wght@300&family=Varela&family=Young+Serif&display=swap');
+
+/* ==============================================================
+Bootstrap tweaks
+===============================================================*/
+
+body,
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
+
+/* Increase contrast of links to get 100% on Lighthouse Accessability Audit. Override this color if you want to change the link color, or use a Bootswatch theme */
+a {
+  color: #533f03;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #533f03;
+}
+
+/* override hover color for dropdown-item forced by bootstrap to all a:not([href]):not([tabindex]) elements in _reboot.scss */
+a:not([href]):not([tabindex]):hover.dropdown-item {
+  color: $dropdown-link-hover-color;
+}
+
+/* override .dropdown-item.active background-color on hover */
+.dropdown-item.active:hover {
+  background-color: mix($dropdown-link-hover-bg, $dropdown-link-active-bg, 50%);
+}
+
+a:hover {
+  /* make sure browsers use the pointer cursor for anchors, even with no href */
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  color: $dropdown-link-hover-color;
+}
+
+/* ==========================================================================
+Browser Upgrade Prompt
+========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+Generic styles
+========================================================================== */
+
+/* Error highlight on input fields */
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid green;
+}
+
+// .ng-invalid:not(form) {
+//   border-left: 5px solid red;
+// }
+#program {
+  background-color: #fff;
+}
+
+.para {
+  margin-top: -295px;
+}
+
+.Key-features {
+  background-color: white;
+  padding-top: 40px;
+  margin-top: 70px;
+  padding-bottom: 30px;
+}
+
+.stone2 {
+  margin-left: 217px;
+  margin-right: 215px;
+}
+.stone1 {
+  margin-right: 45px;
+  margin-left: 45px;
+}
+
+.error {
+  color: white;
+  background-color: red;
+}
+
+.pad {
+  padding: 10px;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.break {
+  white-space: normal;
+  word-break: break-all;
+}
+
+.form-control {
+  background-color: #fff;
+}
+
+.readonly {
+  background-color: #eee;
+  opacity: 1;
+}
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.hand,
+[jhisortby] {
+  cursor: pointer;
+}
+
+/* ==========================================================================
+Custom alerts for notification
+========================================================================== */
+.alerts {
+  .alert {
+    text-overflow: ellipsis;
+    pre {
+      background: none;
+      border: none;
+      font: inherit;
+      color: inherit;
+      padding: 0;
+      margin: 0;
+    }
+    .popover pre {
+      font-size: 10px;
+    }
+  }
+  .jhi-toast {
+    position: fixed;
+    width: 100%;
+    &.left {
+      left: 5px;
+    }
+    &.right {
+      right: 5px;
+    }
+    &.top {
+      top: 55px;
+    }
+    &.bottom {
+      bottom: 55px;
+    }
+  }
+}
+// carousel
+.carousel-indicators {
+  bottom: -65px;
+  color: #f4eded;
+}
+.carousel-control-prev-icon {
+  margin-left: -150px;
+  border-radius: 17px;
+}
+.carousel-control-next-icon {
+  margin-left: 117px;
+  border-radius: 17px;
+}
+@media (max-width: 767px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+  .foot {
+    margin-left: 18px;
+  }
+  .stone2,
+  .stone1 {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+  .carousel-indicators {
+    bottom: -44px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .alerts .jhi-toast {
+    width: 50%;
+  }
+}
+.high-box1 {
+  height: 690px;
+}
+.high-box2 {
+  height: 840px;
+}
+@media (max-width: 767px) {
+  .container1 {
+    flex-direction: column;
+  }
+  // .high-box2 {
+  //   height: auto;
+  // }
+  // .high-box1 {
+  //   height: auto;
+  // }
+  .high-box1 {
+    height: auto;
+  }
+  .high-box2 {
+    height: auto;
+    padding: 0px 150px;
+  }
+  .container2 {
+    flex-direction: column;
+  }
+}
+/* ==========================================================================
+entity list page css
+========================================================================== */
+
+.table-entities thead th .d-flex > * {
+  margin: auto 0;
+}
+
+/* ==========================================================================
+entity detail page css
+========================================================================== */
+.row-md.jh-entity-details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  .row-md.jh-entity-details > {
+    dt {
+      float: left;
+      overflow: hidden;
+      clear: left;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 0.5em 0;
+    }
+    dd {
+      border-bottom: 1px solid #eee;
+      padding: 0.5em 0;
+      margin-left: 0;
+    }
+  }
+}
+
+/* ==========================================================================
+ui bootstrap tweaks
+========================================================================== */
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+  cursor: pointer;
+}
+
+.thread-dump-modal-lock {
+  max-width: 450px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  padding-left: 0px;
+}
+
+/* ==========================================================================
+angular-cli removes postcss-rtl processed inline css, processed rules must be added here instead
+========================================================================== */
+/* page-ribbon.component.scss */
+.ribbon {
+  left: -3.5em;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* navbar.component.scss */
+.navbar {
+  ul.navbar-nav {
+    .nav-item {
+      margin-left: 0.5em;
+    }
+  }
+}
+/* jhipster-needle-scss-add-main JHipster will add new css style */
+
+// key expertises
+.program {
+  background-color: white;
+}

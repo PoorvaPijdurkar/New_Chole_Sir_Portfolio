@@ -1,0 +1,40 @@
+<section id="events" class="custom-section-padding staff-augmentation-testimonial py-5" style="background-image: url(../../../content/images/assets/BG-TEST.jpg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="m-b-20 color-white animate__animated animate__fadeInLeft">EVENTS</h2>
+          <p style="font-style:normal" class="animate__animated animate__fadeInRight"> 
+            VERY VERY…Few Glimpses of Important Events in the Career
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div x-data="{ slide: 0 }">
+            <div class="flex">
+              <div class="w-full flex-none">
+                <div x-show="slide === 0" class="transition-transform transform ease-in-out duration-300">
+                  <carousel *ngIf="eventsData.length > 0" [interval]="3000">
+                    <slide *ngFor="let testimonial of eventsData">
+              <div class="row">
+                <div class="col-8 col-sm-4 col-lg-2 text-center pt-5">
+                  <img class="rounded-lg img-fluid animate__animated animate__fadeInLeft" [src]="testimonial.image" alt="" loading="lazy">
+                </div>
+                <div class="col-12 col-sm-12 col-lg-10">
+                  <div class="testimonial custom-testimonial-style-1 mb-0">
+                    <blockquote class="pb-2 animate__animated animate__fadeInRight">
+                      <p>{{ testimonial.content }}</p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </slide>
+          </carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  

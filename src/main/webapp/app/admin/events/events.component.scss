@@ -1,0 +1,103 @@
+#events {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+.custom-section-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.staff-augmentation-testimonial {
+  background-position: center;
+  background-size: cover;
+}
+
+#events h2 {
+  margin-bottom: -22px;
+  font-size: 22px;
+}
+#events p {
+  margin-bottom: 35px;
+  font-size: 18px;
+  margin-top: 38px;
+  line-height: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  font-family: 'Crimson Text, serif';
+}
+.slick-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+.slick-prev,
+.slick-next {
+  font-size: 24px;
+}
+.custom-testimonial-style-1 {
+  border-left: 2px solid orange;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+.slick-dots {
+  bottom: 1px;
+}
+.custom-testimonial-style-1 blockquote {
+  font-size: 18px;
+  line-height: 1.6;
+}
+#events .row {
+  margin-top: -32px;
+}
+.testimonial-author {
+  margin-top: -46px;
+}
+
+.text-color-primary {
+  color: gray;
+}
+.rounded-lg{
+  margin-top: 16px;
+}
+.col-8{
+  width: 37%;
+  padding-left: 50px;
+}
+@media  (max-width:767px){
+  .col-8{
+  width: 99%;
+    margin-left: -22px;
+}
+#events p{
+  font-size: 16px;
+}
+}
+@media (max-width: 767px) {
+  // img {
+  //   margin-left: 46px;
+  // }
+}
+@media (min-width: 992px){
+.col-lg-10 {
+    flex: 0 0 auto;
+    width: 62.333333%;
+    margin-top: 69px;
+}
+}
+.m-b-20 {
+  margin-bottom: 3rem;
+  font-size: 30px;
+  margin-left: 46px;
+  margin-top: 25px;
+  font-family: "Libre Caslon Display", serif;
+}
+h2, h3 {
+  margin: 0;
+  font-weight: 700;
+}
+@media(max-width:767px){
+  #events h2 {
+    margin-left: 0px;
+    margin-top: 35px;
+}
+}

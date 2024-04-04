@@ -1,0 +1,83 @@
+<div class="up-container w-full pt-10 h-[350px] mt-[72px] text-white bg-slate-700">
+    <p class="test ml-14 text-3xl"><b>Contact Us</b></p>
+</div>
+
+<div class="low-container w-full">
+    <div class="left-container ">
+        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" name="editForm" role="form" [formGroup]="editForm">
+            <h2 class="head get md:mb-4 font-bold text-3xl">Contact Us</h2>
+            <div class="flex">
+                <div class="mb-4 mt-4 form-group">
+                    <input class="first form-control shadow-md  rounded-sm py-2 px-3 text-gray-700 leading-tight "
+                        id="name" formControlName="name" type="text" name="name" placeholder="Username" />
+                    <div *ngIf="editForm.get('name')!.invalid && (editForm.get('name')!.dirty || editForm.get('name')!.touched)"
+                        class="text-red-500 text-sm mt-1">
+                        <small *ngIf="editForm.get('name')?.errors?.['required']">
+                            This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="mb-4 mt-4 ml-5 form-group">
+                    <input
+                        class="first form-control  shadow-md  appearance-none border rounded-sm  py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="contactNumber" formControlName="contactNumber" type="text" name="contactNumber"
+                        placeholder="contact Number" />
+                    <div *ngIf="editForm.get('contactNumber')!.invalid && (editForm.get('contactNumber')!.dirty || editForm.get('contactNumber')!.touched)"
+                        class="text-red-500 text-sm mt-1">
+                        <small *ngIf="editForm.get('contactNumber')?.errors?.['required']">This field is
+                            required.</small>
+                        <small *ngIf="editForm.get('contactNumber')?.errors?.['pattern']">Please enter a 10-digit Mobile
+                            Number</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 mt-2 form-group">
+                <input
+                    class="form-control md:w-full shadow-md  appearance-none border rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="email" formControlName="email" type="text" name="email" placeholder="Email Id" />
+                <div *ngIf="editForm.get('contactNumber')!.invalid && (editForm.get('email')!.dirty || editForm.get('email')!.touched)"
+                    class="text-red-500 text-sm mt-1">
+                    <small *ngIf="editForm.get('email')?.errors?.['required']">Email is required</small>
+                    <small *ngIf="editForm.get('email')?.errors?.['email']">Email must be a valid email address.</small>
+                </div>
+            </div>
+
+            <div class="mb-6 mt-6">
+                <textarea
+                    class="form-control md:w-full sm:w-8/12 shadow-md  appearance-none border rounded-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="message" formControlName="message" type="text" name="message"
+                    placeholder="Your Message"></textarea>
+                <div *ngIf="editForm.get('message')!.invalid && (editForm.get('message')!.dirty || editForm.get('message')!.touched)"
+                    class="text-red-500 text-sm mt-1">
+                    <small *ngIf="editForm.get('message')?.errors?.['required']">This field is required</small>
+                </div>
+            </div>
+
+            <div *ngIf="showThankYouMessage" class="text-center text-green-500 text-md mt-1">
+        Thank You for contacting us. Our team will get back to you shortly.
+      </div>
+
+            <div class="flex items-center form-group">
+        <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
+            [disabled]="editForm.invalid || isSaving" type="submit" value="send">
+            Get In Touch
+        </button>
+    </div>
+        </form>
+    </div>
+
+    <div class="right-container pl-36  ">
+        <div class="second">
+            <p class="justify-start"><i class="bi bi-geo-alt"></i><span class="ml-3"> Brighton Lane, Lake Forest, CA 92630<br></span>
+                <span class="sec ml-3"> Our office is open: Mon to Fri <br></span>
+                <span class="thir ml-3"> Privacy Policy and Terms of Service</span>
+            </p>
+
+            <p class="mt-3"><i class="bi bi-telephone-fill"></i><span class="ml-3">Phone: </span>9420496260</p>
+            <p class="mt-3 "><i class="bi bi-envelope"></i><span class="ml-3">Email: </span>vijaychole@gmail.com </p>
+        </div>
+    </div>
+</div>

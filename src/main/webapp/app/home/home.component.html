@@ -1,0 +1,84 @@
+<!-- slider -->
+<div class="banner-header align bg-img bg-fixed bg-position-bottom" data-overlay-dark="0">
+  <carousel>
+    <ng-container *ngFor="let slide of slides; let index = index">
+      <div data-aos="fade-left" [attr.data-aos-delay]="100 + index * 30">
+        <slide>
+          <div class="slide-wrapper">
+            <img [src]="slide.image" alt="Slide {{ index + 1 }}" class="image w-full animate__animated animate__fadeIn" />
+            <div class="carousel-caption">
+              <div class="slider-text">
+                <p class="font-bold text-5xl text animate__animated animate__slideInRight">{{ slide.caption }}<br />{{ slide.caption1 }}</p>
+              </div>
+            </div>
+          </div>
+        </slide>
+      </div>
+    </ng-container>
+  </carousel>
+</div>
+<!-- about -->
+<section id="about1">
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="pic bg-white p-12 md:p-24 flex justify-end items-center">
+      <a href=""
+        ><img
+          src="../../content/images/assets/intro.jpg"
+          class="w-full max-w-md animate__animated animate__fadeIn"
+          style="animation-duration: 5s"
+      /></a>
+    </div>
+    <div class="bg-gray-100 p-12 md:p-24 flex justify-start items-center">
+      <div class="max-w-md">
+        <div class="w-24 h-2 bg-yellow-800 mb-4"></div>
+        <h2 class="font-display font-bold text-2xl md:text-3xl lg:text-4xl mb-6 animate__animated animate__bounce">
+          {{ about.title }}
+        </h2>
+        <p
+          class="aboutDesc text-gray-600 text-sm md:text-base mb-6 leading-relaxed mt-4 text-justify animate__animated animate__fadeInRight"
+          style="animation-duration: 3s"
+        >
+          {{ about.desc }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  -->
+<div id="acadamics" class="Title_section" style="background-image: url('../../content/images/assets/keys/BG-TEST1.jpg')">
+  <div class="container">
+    <div class="row flex-row">
+      <div class="academy col-lg-6 p-t-60 p-b-60">
+        <h2 class="m-b-20 text-black animate__animated animate__bounce">{{ about.title1 }}</h2>
+        <p class="paragraph color-white text-justify animate__animated animate__fadeInLeft" style="animation-duration: 6s">
+          {{ about.academic1 }}<br /><br />{{ about.academic2 }}<br /><br />{{ about.academic3 }}<br /><br />{{ about.academic4 }}
+        </p>
+      </div>
+      <div class="mile1 col-lg-6 animate__animated animate__fadeInRight" style="animation-duration: 6s">
+        <img src="../../content/images/assets/milestone.jpg" class="miles" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- key expertise  -->
+<div id="program" class="container">
+  <div class="inner-container">
+    <div class="TS-title">
+      <h2 class="key m-b-20 text-black animate__animated animate__fadeInLeft" style="animation-duration: 7s">
+        {{ about.keyExpertise }}
+      </h2>
+    </div>
+
+    <div class="row tool_box -mt-16 animate__animated animate__fadeInRight" style="animation-duration: 7s">
+      <div *ngFor="let tool of tools" class="col-auto tool-section">
+        <div class="tool-item">
+          <img [src]="tool.imageSrc" class="responsive-image" />
+          <p class="tool-name">{{ tool.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--  events -->
+<jhi-events></jhi-events>
+<!--  -->

@@ -1,0 +1,39 @@
+.container3 {
+  margin-bottom: 15px;
+  margin-top: 90px;
+}
+.contsiner4 {
+  margin-left: 20px;
+}
+p {
+  margin-top: 30px;
+  font-family: 'Almarai', sans-serif;
+  font-weight: 00;
+}
+.img {
+  text-align: center;
+  height: 50px;
+  width: 50px;
+}
+.stone1:hover {
+  cursor: pointer;
+}
+.stone2:hover {
+  cursor: pointer;
+}
+.stone-head {
+  margin: 20px 0;
+}
+@media (max-width: 767px) {
+  .stone2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .stone-head {
+    font-size: 30px;
+    margin-top: -5px;
+  }
+  .stone1 {
+    margin-top: -20px;
+  }
+}

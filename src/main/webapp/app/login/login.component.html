@@ -1,0 +1,39 @@
+<div class="para">
+  <div class="container">
+    <h1 class="m-b-20 font-bold text-center text-4xl text-slate-700 mt-96 animate__animated animate__fadeInLeftBig">Achievements</h1>
+
+    <div
+      class="container1"
+      style="display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 30px; margin-top: 10px"
+    >
+      <div
+        *ngFor="let item of data"
+        class="high-box1 shadow-2xl animate__animated animate__zoomIn"
+        style="width: 350px; padding: 15px; border-radius: 10px; font-family: Cambria; font-size: 14px"
+      >
+        <img [src]="item.image" alt="image1" style="width: 311px; height: 200px" />
+        <h2 class="mt-4 text-center text-lg">
+          <b>{{ item.head }}</b>
+        </h2>
+        <p class="h-para text-justify" style="font-family: 'Almarai', sans-serif">{{ item.text }}</p>
+      </div>
+    </div>
+
+    <div
+      class="container2"
+      style="display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 0px 150px; padding-bottom: 50px"
+    >
+      <div
+        *ngFor="let item2 of data2"
+        class="high-box2 shadow-2xl animate__animated animate__zoomIn"
+        style="width: 330px; padding: 15px; border-radius: 10px; font-family: Cambria; font-size: 14px"
+      >
+        <img [src]="item2.image" alt="image2" style="width: 311px; height: 230px" />
+        <h2 class="mt-4 text-center text-lg">
+          <b>{{ item2.head }}</b>
+        </h2>
+        <p class="h-para text-justify" style="font-family: 'Almarai', sans-serif">{{ item2.text }}</p>
+      </div>
+    </div>
+  </div>
+</div>
